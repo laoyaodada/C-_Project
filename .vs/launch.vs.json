@@ -1,0 +1,12 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "C++_Project.exe (C++_Project\\C++_Project.exe)",
+      "name": "C++_Project.exe (C++_Project\\C++_Project.exe)"
+    }
+  ]
+}
