@@ -3,16 +3,17 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-#当前目录下所有源文件赋给DIR_MAIN
+# 当前目录下所有源文件赋给DIR_MAIN
 AUX_SOURCE_DIRECTORY(. DIR_MAIN)
 
-#设置编译参数
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
-
-#包含的头文件
+# 包含的头文件
 include_directories(
     ./Include
 )
+# 设置编译器,编译参数，构建类型
+SET(CMAKE_CXX_COMPILER "g++")
+SET(CMAKE_BUILD_TYPE "Debug")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
 
 #生成可执行文件
 add_executable(main ${DIR_MAIN})

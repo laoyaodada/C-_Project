@@ -18,7 +18,7 @@ public:
     int k;
 };
 
-int main(int argc, const char *argv[]) {
+int main(int argc, const char* argv[]) {
     /*try {
         // throw Exception("test", __FILE__, __LINE__);
         throw_exception(ArithmeticException, "test");
@@ -38,11 +38,11 @@ int main(int argc, const char *argv[]) {
     // nsp = sp;
     // cout << sp.pointer_is_null() << endl;
     // cout << nsp.pointer_is_null() << endl;
+
     Object* obj1 = new Test();
     Object* obj2 = new Child();
 
     delete obj1;
     delete obj2;
-    getchar();
     return 0;
 }

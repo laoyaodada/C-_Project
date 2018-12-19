@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/C++_Project/C++_Project",
+            "program": "${workspaceFolder}/build/C++_Project/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

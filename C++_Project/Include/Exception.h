@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef __EXCEPTION_H__
 #define __EXCEPTION_H__
 

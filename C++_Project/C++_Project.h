@@ -1,11 +1,10 @@
-// C++_Project.h: 标准系统包含文件的包含文件
-// 或项目特定的包含文件。
 
-#pragma once
+#ifndef __CPP_PROJECT_H__
+#define __CPP_PROJECT_H__
 
 #include <iostream>
 #include "Exception.h"
-#include "SmartPointer.h"
 #include "Object.h"
+#include "SmartPointer.h"
 
-// TODO: 在此处引用程序需要的其他标头。
+#endif
