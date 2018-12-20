@@ -20,7 +20,7 @@ public:
     Exception &operator=(const Exception &e);
     virtual const char *get_message() const;
     virtual const char *get_location() const;
-    virtual ~Exception();
+    virtual ~Exception() = 0;
 };
 
 class ArithmeticException : public Exception {
