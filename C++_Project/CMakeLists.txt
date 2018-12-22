@@ -8,7 +8,7 @@ AUX_SOURCE_DIRECTORY(. DIR_MAIN)
 
 # 包含的头文件
 include_directories(
-    ./Include
+    ./Headers
 )
 # 设置编译器,编译参数，构建类型
 SET(CMAKE_CXX_COMPILER "g++")
@@ -19,7 +19,7 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall")
 add_executable(main ${DIR_MAIN})
 
 #添加Src子目录
-add_subdirectory(Srcs)
+add_subdirectory(Sources)
 
 #添加链接库
-target_link_libraries(main Srcs)
+target_link_libraries(main Sources)

@@ -3,7 +3,7 @@
 aux_source_directory(. DIR_SRCS)
 
 include_directories(
-    ../Include
+    ../Headers
 )
 # 生成链接库
-add_library(Srcs ${DIR_SRCS})
+add_library(Sources ${DIR_SRCS})
