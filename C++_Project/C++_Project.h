@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "Exception.h"
+#include "List.h"
 #include "Object.h"
 #include "SmartPointer.h"
 
