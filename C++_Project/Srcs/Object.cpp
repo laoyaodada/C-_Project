@@ -1,5 +1,4 @@
 
-
 #include "Object.h"
 #include <cstdlib>
 #include <iostream>

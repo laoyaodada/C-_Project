@@ -1,11 +1,12 @@
-#pragma once
 
 #ifndef __SMARTPOINTER_H__
 #define __SMARTPOINTER_H__
 
+#include "Object.h"
+
 namespace LYlib {
 template <typename T>
-class SmartPointer {
+class SmartPointer : public Object {
 protected:
     T* m_pointer;
 

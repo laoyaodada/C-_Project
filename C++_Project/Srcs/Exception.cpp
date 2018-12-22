@@ -8,13 +8,15 @@ using namespace std;
 namespace LYlib {
 void Exception::init(const char* message, const char* file, int line) {
     m_message = strdup(message);
-    if (file != NULL) {
+    if (NULL != file) {
         char sl[16] = {0};
         sprintf(sl, "%d", line);
         m_location = static_cast<char*>(malloc(strlen(file) + strlen(sl) + 2));
-        m_location = strcpy(m_location, file);
-        m_location = strcat(m_location, ":");
-        m_location = strcat(m_location, sl);
+        if (NULL != m_location) {
+            m_location = strcpy(m_location, file);
+            m_location = strcat(m_location, ":");
+            m_location = strcat(m_location, sl);
+        }
     } else {
         m_location = NULL;
     }
