@@ -6,6 +6,7 @@
 #include "Exception.h"
 #include "List.h"
 #include "Object.h"
+#include "SeqList.h"
 #include "SmartPointer.h"
 
 #endif

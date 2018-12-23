@@ -17,6 +17,6 @@ public:
 };
 
 int main(int argc, const char* argv[]) {
-    List<int>* l = NULL;
+    SeqList<int>* l;
     return 0;
 }
