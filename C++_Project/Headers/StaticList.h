@@ -15,7 +15,9 @@ public:
         this->m_array  = m_space;
         this->m_length = 0;
     }
-    int capacity() const { return N; }
+    int capacity() const {
+        return N;
+    }
 };
 }  // namespace LYlib
 

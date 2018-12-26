@@ -14,21 +14,19 @@ public:
             this->m_length   = 0;
             this->m_capacity = capacity;
         } else {
-            throw_exception(NoEnoughMemoryException,
-                            "No memory to create DynamicList object ...");
+            throw_exception(NoEnoughMemoryException, "No memory to create DynamicList object ...");
         }
     }
-    int capacity() const { return m_capacity; }
+    int capacity() const {
+        return m_capacity;
+    }
     /* 重新设置顺序存储空间的大小 */
     void resize(int capacity) {
         if (capacity != m_capacity) {
             T* array = new T[capacity];
             if (array != NULL) {
-                int length =
-                    (this->m_length < capacity ? this->m_length : capacity);
-                for (int i = 0; i < length; i++) {
-                    array[i] = this->m_array[i];
-                }
+                int length = (this->m_length < capacity ? this->m_length : capacity);
+                for (int i = 0; i < length; i++) { array[i] = this->m_array[i]; }
                 T* temp          = this->m_array;
                 this->m_array    = array;
                 this->m_length   = length;
@@ -36,12 +34,13 @@ public:
                 delete[] temp;
             }
         } else {
-            throw_exception(NoEnoughMemoryException,
-                            "No memory to resize DynamicList object...");
+            throw_exception(NoEnoughMemoryException, "No memory to resize DynamicList object...");
         }
     }
     // 归还空间
-    ~DynamicList() { delete[] this->m_array; }
+    ~DynamicList() {
+        delete[] this->m_array;
+    }
 };
 }  // namespace LYlib
 

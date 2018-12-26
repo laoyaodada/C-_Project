@@ -22,16 +22,10 @@ int main(int argc, const char* argv[]) {
     //     cout << e.get_location() << endl;
     // }
     DynamicList<int> l(5);
-    for (int i = 0; i < l.capacity(); i++) {
-        l.insert_node(0, i);
-    }
-    for (int i = 0; i < l.length_list(); i++) {
-        cout << l[i] << endl;
-    }
+    for (int i = 0; i < l.capacity(); i++) { l.insert_node(0, i); }
+    for (int i = 0; i < l.length_list(); i++) { cout << l[i] << endl; }
     l[0] *= l[0];
-    for (int i = 0; i < l.length_list(); i++) {
-        cout << l[i] << endl;
-    }
+    for (int i = 0; i < l.length_list(); i++) { cout << l[i] << endl; }
     try {
         l[5] = 5;
     } catch (const Exception& e) {
@@ -41,9 +35,7 @@ int main(int argc, const char* argv[]) {
         l.insert_node(5, 50);
     }
     l[5] = 5;
-    for (int i = 0; i < l.length_list(); i++) {
-        cout << l[i] << endl;
-    }
+    for (int i = 0; i < l.length_list(); i++) { cout << l[i] << endl; }
 
     return 0;
 }

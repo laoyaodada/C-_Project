@@ -13,7 +13,7 @@ public:
     virtual bool remove_node(int i)             = 0;
     virtual bool set_value(int i, const T& e)   = 0;
     virtual bool get_value(int i, T& e) const   = 0;
-    virtual int length_list() const             = 0;
+    virtual int  length_list() const            = 0;
     virtual void clear_list()                   = 0;
 };
 

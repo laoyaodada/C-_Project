@@ -22,8 +22,12 @@ void Exception::init(const char* message, const char* file, int line) {
     }
 }
 
-Exception::Exception(const char* message) { init(message, NULL, 0); }
-Exception::Exception(const char* file, int line) { init(NULL, file, line); }
+Exception::Exception(const char* message) {
+    init(message, NULL, 0);
+}
+Exception::Exception(const char* file, int line) {
+    init(NULL, file, line);
+}
 Exception::Exception(const char* message, const char* file, int line) {
     init(message, file, line);
 }
@@ -40,8 +44,12 @@ Exception& Exception::operator=(const Exception& e) {
     }
     return *this;
 }
-const char* Exception::get_message() const { return m_message; }
-const char* Exception::get_location() const { return m_location; }
+const char* Exception::get_message() const {
+    return m_message;
+}
+const char* Exception::get_location() const {
+    return m_location;
+}
 Exception::~Exception() {
     free(m_message);
     free(m_location);
