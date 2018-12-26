@@ -7,10 +7,10 @@ namespace LYlib {
 
 class Object {
 public:
-    void *operator new(size_t size) throw();
-    void  operator delete(void *p);
-    void *operator new[](size_t size) throw();
-    void  operator delete[](void *p);
+    void *operator new(size_t heap_size) throw();
+    void  operator delete(void *heap_space);
+    void *operator new[](size_t heap_size) throw();
+    void  operator delete[](void *heap_space);
     virtual ~Object() = 0;
 };
 

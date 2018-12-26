@@ -5,24 +5,25 @@
 #include "Object.h"
 
 namespace LYlib {
+
 template <typename T>
 class SmartPointer : public Object {
 protected:
     T* m_pointer;
 
 public:
-    SmartPointer(T* p = NULL) {
-        m_pointer = p;
+    SmartPointer(T* object = NULL) {
+        m_pointer = object;
     }
-    SmartPointer(const SmartPointer<T>& obj) {
-        m_pointer                                   = obj.m_pointer;
-        const_cast<SmartPointer<T>&>(obj).m_pointer = NULL;
+    SmartPointer(const SmartPointer<T>& object) {
+        m_pointer                                      = object.m_pointer;
+        const_cast<SmartPointer<T>&>(object).m_pointer = NULL;
     }
-    SmartPointer<T>& operator=(const SmartPointer<T>& obj) {
-        if (this != &obj) {
+    SmartPointer<T>& operator=(const SmartPointer<T>& object) {
+        if (this != &object) {
             delete m_pointer;
-            m_pointer                                   = obj.m_pointer;
-            const_cast<SmartPointer<T>&>(obj).m_pointer = NULL;
+            m_pointer                                      = object.m_pointer;
+            const_cast<SmartPointer<T>&>(object).m_pointer = NULL;
         }
         return *this;
     }
@@ -33,7 +34,7 @@ public:
     T& operator*() {
         return *m_pointer;
     }
-    bool pointer_is_null() {
+    bool is_null() {
         return (NULL == m_pointer);
     }
     T* get_pointer() {
@@ -43,6 +44,7 @@ public:
         delete m_pointer;
     }
 };
+
 }  // namespace LYlib
 
 #endif
